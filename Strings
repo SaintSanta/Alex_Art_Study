@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title> Strings </title>
+</head>
+<body>
+
+  <script>
+'use strict'
+ 
+//сложение строк (арифметически и встроенными методами)  
+function stringConcatenation(a, b) {
+  var a = prompt('First line',);       //есть вопрос с областью видимости. (var\let)
+  var b = prompt('Second line',);
+    return a + b;
+}
+//alert(stringConcatenation());
+
+function stringConcatenation2(a, b) {
+  var a = prompt('First line',);
+  var b = prompt('Second line',);
+  var strConc = a.concat(b);
+    return strConc;
+}
+//alert(stringConcatenation2());
+ 
+
+//определение длины строки
+function stringLength(str) {
+  var str = prompt('Write your text',);
+    return str.length;
+}
+//alert(`Length of string = ${stringLength( )}`);
+
+
+//Hello {name} // вывод "Привет, {username}" через шаблонные строки
+function hiName() {
+  let name = prompt("What is your name?",);
+    return 'Hi, '+ name + "!";
+}
+//alert(hiName());
+
+
+//поиск подстроки по точному совпадению
+function findWord() {
+  let str = prompt('Write your string:',);
+  let searchWord = prompt('Write the word you are looking for:',)
+    return str.includes(searchWord);
+}
+//console.log(findWord());
+
+
+//вернуть ту же строку, но со всеми прописными буквами ("приветик" -> "ПРИВЕТИК")
+function bigLetter() {
+  let word = prompt('Write word',);
+    return word.toUpperCase();
+}
+//console.log(bigLetter());
+
+
+//вернуть ту же строку, но с большой буквы ("приветик" -> "Приветик")
+function firstBigLetter() {
+  let word = prompt('Write word',);
+  if (!word) return word;
+    return word[0].toUpperCase() + word.slice(1);
+}
+//console.log(firstBigLetter());
+
+
+//вернуть строку, убрав в начале и в конце пробельные символы (" приветик " -> "приветик")
+function noMargins() {
+  let str = prompt('Write your text',);
+    return str.trim();
+}
+//console.log(noMargins());
+
+
+//разделить строку по разделителю на массив ("Юра, Маша, Саша", ", " -> ["Юра", "Маша", "Саша"])
+let strName = ('Юра, Маша, Саша');
+function arrName() {
+  let strToArrName = strName.split(', ');
+    return strToArrName;
+}
+//console.log(arrName());
+
+
+//поиск подстроки по точному совпадению (дополнительно - по регулярному выражению)
+function exactMatch() {
+  let str = prompt('Write your string:',);
+  let searchWord = prompt('Write the word you are looking for:',)
+    return str.match(`${searchWord}`);
+}
+//console.log(exactMatch());
+
+  </script>
+</body>
+</html>
