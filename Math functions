@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title> Math function </title>
+</head>
+<body>
+
+  <script>
+
+//the area of square (вычисления площади прямоугольника по ширине и высоте) 
+function areaSquare() {
+  let sideA = prompt('One of side of the rectangle = ');
+  let sideB = prompt('Second of side of the rectangle = ');
+  let area = sideA * sideB;
+    return (`The area of square ${sideA} x ${sideB} = ${area}`);
+}
+//alert(areaSquare());
+
+
+//circumference (вычисления длины окружности по радиусу (l = 2 * Math.PI * r) )
+function circumference() {
+  let r = prompt('Write the radius(r) of the circle');
+  let l = 2 * Math.PI * r;
+    return (` Circumference (r=${r}) = ${l}`);
+}
+//alert(circumference());
+
+
+//the arithmetic mean (вычисления среднего арифметического двух чисел)
+function arithmeticMean() {
+  let a = Number(prompt('Write first number'));
+  let b = Number(prompt('Write second number'));
+  let arithmeticMeanOfNumbers = (a + b)/2;
+    return (`The arithmetic mean ${a} and ${b} = ${arithmeticMeanOfNumbers}`);
+}
+//alert(arithmeticMean());
+
+
+//getting the last digit of a number (получения последней цифры числа)
+function lastDigitOfNumber() {
+  let number = Number(prompt('Write number'));
+  let lastNumber = Number(number.toString().slice(-1));
+    return (`The last digit of a number = ${lastNumber}`)
+}
+//alert(lastDigitOfNumber());
+
+
+//getting a number from a string (получения числа из строки (1 из "1"))
+function getNumber(value) {
+  if (/$/.test(value))
+  return Number(value);
+  return NaN;
+}
+//alert(getNumber('45'))      
+/* есть проблема. Если добавляю prompt то при вводе 'число' выводит NaN, а через консоль всё ок. Как так?) */
+
+
+//определения является ли число простым
+function primeNumber(num) {
+  for(let i = 2; i < num; i++)
+    if (num % i === 0) return false;
+  return num > 1;
+}
+//alert(primeNumber(3));
+
+
+//преобразования строки к числу или возврат "not a number", если строка не является числом (Math.isNaN метод может помочь)
+function stringToNumber() {
+  let value = prompt('Write number',)
+   if (Number(value)) {
+   return value;
+   } alert('not a number');
+}
+//alert(stringToNumber())
+
+
+  </script>
+</body>
+</html>
